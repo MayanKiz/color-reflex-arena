@@ -2,8 +2,8 @@ import './globals.css';
 import settings from '../lib/color-rush/settings';
 
 export const metadata = {
-  title: 'Color Rush — Reflex Arena',
-  description: 'A fast, focused colour-matching reflex challenge.',
+  title: 'Color Reflex Arena',
+  description: 'A browser game that challenges players to react to color prompts under time pressure and records competitive scores.',
 };
 
 export default function RootLayout({ children }) {
