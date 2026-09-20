@@ -1,6 +1,6 @@
 # Memory
 
-Sample Message
+Sample Text
 
 `database/schema.sql` must be run once in the Neon SQL editor. The server functions accept `DATABASE_URL`, `POSTGRES_URL`, or `NEON_DATABASE_URL`. Telegram remains optional and is handled by the same score-submission function.
 

@@ -5,7 +5,7 @@
 - Replace the partial screen flow with a complete start, play, result, and leaderboard experience.
 - Add progressive visual feedback, timer progress, streaks, pause/resume, quit-round handling, keyboard support, and mobile-friendly controls.
 - Preserve Supabase online scores while adding a local-storage fallback.
-Sample Message
+Sample Text
 - Add generated neon arena art as the visual direction and page background.
 
 ## Verification criteria
