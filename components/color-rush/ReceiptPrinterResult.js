@@ -20,7 +20,8 @@ export default function ReceiptPrinterResult({ result }) {
             <span>RUN COMPLETE</span>
           </div>
 
-          <article className="receipt-paper">
+          <div className="receipt-paper-feed">
+            <article className="receipt-paper">
             <div className="receipt-paper-head">
               <span>COLOR RUSH</span>
               <strong>RESULT</strong>
@@ -59,7 +60,8 @@ export default function ReceiptPrinterResult({ result }) {
               <span>THANKS FOR PLAYING</span>
               <span>COLOR RUSH / 2026</span>
             </div>
-          </article>
+            </article>
+          </div>
         </div>
 
         <div className="receipt-slot" />
