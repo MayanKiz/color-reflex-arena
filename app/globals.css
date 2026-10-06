@@ -1119,3 +1119,83 @@ body {
     padding-inline: 11px;
   }
 }
+
+
+/* Receipt feed animation: the paper prints from inside the slot and settles into view. */
+.receipt-paper-feed {
+  position: relative;
+  overflow: hidden;
+  max-height: 620px;
+  animation: receipt-feed-reveal 1.15s cubic-bezier(.23,1,.32,1) both;
+}
+
+.receipt-paper {
+  transform-origin: 50% 0%;
+  animation: receipt-paper-print 1.15s cubic-bezier(.23,1,.32,1) both;
+}
+
+@keyframes receipt-feed-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  55% {
+    clip-path: inset(0 0 20% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes receipt-paper-print {
+  0% {
+    transform: translateY(-100%);
+    opacity: .45;
+  }
+  45% {
+    transform: translateY(-32%);
+    opacity: .9;
+  }
+  78% {
+    transform: translateY(3%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.receipt-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.78), transparent);
+  opacity: .55;
+  animation: receipt-shine 1.15s ease-out both;
+}
+
+@keyframes receipt-shine {
+  0% { transform: translateY(-34px); opacity: 0; }
+  45% { opacity: .75; }
+  100% { transform: translateY(0); opacity: .35; }
+}
+
+.receipt-slot {
+  z-index: 5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receipt-paper-feed,
+  .receipt-paper,
+  .receipt-paper::before {
+    animation: none;
+  }
+
+  .receipt-paper-feed {
+    clip-path: none;
+  }
+}
